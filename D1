@@ -1,0 +1,29 @@
+import java.util.*;
+public class D1 {
+
+	public static void main(String[] args) {
+		int p;
+		int q;
+		
+		//Zahlen einlesen
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Bitte geben sie die erste Zahl ein: ");
+		p = sc.nextInt();
+		System.out.print("Bitte geben sie die zweite Zahl ein: ");
+		q = sc.nextInt();
+		
+		// ggT berechnen
+		int r;
+		while(p % q != 0) 
+		{
+			r = p % q;
+			p = q;
+			q = r;
+		}
+		
+		System.out.println("Der gesuchte ggT ist: " + q);
+	
+	}
+
+}
