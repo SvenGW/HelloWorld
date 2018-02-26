@@ -1,0 +1,38 @@
+import java.util.*;
+public class E1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("bitte geben sie ein wie viele stellen das Array haben soll: ");
+		int k = sc.nextInt();
+		int p = k;
+		int[] array = new int[k];
+		while(k > 0) 
+		{
+			array[k-1] = k;
+			k--;
+		} 
+		printArray(array, p);
+
+	}
+	public static void printArray(int[] array, int k) 
+	{
+		while(k > 0) {
+		System.out.println(array[k-1]);
+		k--;
+		}
+
+	}
+	public static int searchIndex(int[] a, int value) 
+	{
+		if(a[value - 1] == value) 
+		{
+			return value- 1;
+		}
+		else 
+		{
+			System.out.println("der Wert ist nicht im Array enthalten!");
+			return -1;
+		}
+	}
+}
